@@ -32,7 +32,7 @@ const fs = require("fs");
 // 3.异步读取：Promise
 fs.promises
   .readFile("./abc.txt", {
-    encoding: "utf-8",
+    // encoding: "utf-8",
   })
   .then((res) => {
     console.log(res);
