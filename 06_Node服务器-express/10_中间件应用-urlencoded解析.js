@@ -4,7 +4,7 @@ const express = require("express");
 const app = express();
 
 // 应用一些中间件
-app.use(express.json()); // 解析 multipart/form-data 格式的数据
+app.use(express.json()); // 解析 application/json 格式的数据
 // 解析传递过来urlencoded的时候，默认使用的node的内置querystring模块
 // {extended: true} 作用是，不再使用内置的qs，而是使用第三方库qs（这个第三方库是集成在了express中，不需要我们手动下载了。）
 app.use(express.urlencoded({ extended: true })); // 解析 application/x-www-form-urlencoded 格式的数据
