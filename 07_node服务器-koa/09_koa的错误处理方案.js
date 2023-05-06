@@ -22,6 +22,7 @@ app.use(userRouter.allowedMethods());
 app.on("error", (code, ctx) => {
   const errorCode = code;
   let message = "";
+
   switch (errorCode) {
     case -1001:
       message = "账号或者密码错误~";
@@ -33,6 +34,8 @@ app.on("error", (code, ctx) => {
       message = "未授权,请检查你的token信息";
       break;
   }
+
+  ctx.body = message;
 });
 
 app.listen(6000, () => {
