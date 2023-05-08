@@ -1,5 +1,1 @@
-/node_modules
-
-/06_Node服务器-express/node_modules
-
-/07_Node服务器-koa/node_modules
+**/node_modules
